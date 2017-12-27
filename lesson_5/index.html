@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 5</title>
+    <style>
+        .demo {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        .green {
+            background-color: green;
+        }
+        
+        .blue {
+            background-color: blue;
+        }
+        
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+        <div class="demo" :class="color"></div>
+        <div class="demo" :style="{backgroundColor:inlineColor}"></div>
+        <hr>
+        <input type="text" v-model="color">
+        <input type="text" v-model="inlineColor">
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
